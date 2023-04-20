@@ -1,0 +1,8 @@
+rootProject.name = 'demo'
+
+def application = System.getenv('APPLICATION_FIRST_OR_SECOND') ?: 'application:second'
+include 'application:shared', application
+
+//include 'application:shared', 'application:first'
+//include 'application:shared', 'application:second'
+//include 'application:shared', 'application:first', 'application:second' // it seems FirstDemoApplication is prioritized
